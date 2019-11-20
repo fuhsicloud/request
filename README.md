@@ -1,7 +1,7 @@
 # 使用方式
 
 ```
-$ go get github.com/kplcloud/request
+$ go get github.com/fuhsicloud/request
 ```
 
 ### GET
@@ -9,7 +9,7 @@ $ go get github.com/kplcloud/request
 ```go
 import (
 	"fmt"
-	"github.com/kplcloud/request"
+	"github.com/fuhsicloud/request"
 )
 
 func main(){
@@ -22,7 +22,7 @@ func main(){
 	
 	
 	var resp map[string]interface{}
-	err := request.NewRequest("nsini.com", "GET").Do().Into(&resp)
+	err := request.NewRequest("fuhsicloud.com", "GET").Do().Into(&resp)
 	if err == nil {
 		fmt.Println(resp)
 	}
@@ -34,7 +34,7 @@ func main(){
 ```go
 import (
 	"fmt"
-	"github.com/nsini/request"
+	"github.com/fuhsicloud/request"
 )
 
 type Res struct {
@@ -43,7 +43,7 @@ type Res struct {
 
 func main(){
 	var res Res
-	err := request.NewRequest("nsini.com", "POST").
+	err := request.NewRequest("fuhsicloud.com", "POST").
 		Body([]byte(`{"hello": "world"}`)).
 		Do().Into(&res)
 	if err != nil {
@@ -59,7 +59,7 @@ func main(){
 ```go
 import (
 	"fmt"
-	"github.com/nsini/request"
+	"github.com/fuhsicloud/request"
 	"crypto/tls"
     "net"
     "net/http"
