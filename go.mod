@@ -1,4 +1,4 @@
-module github.com/kplcloud/request
+module github.com/fuhsicloud/request
 
 go 1.12
 
